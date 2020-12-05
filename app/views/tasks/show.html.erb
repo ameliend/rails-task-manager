@@ -1,5 +1,11 @@
 <h1> <%= @task.title %>  </h1>
 <p> <%= @task.details %> </p>
 
-<%= link_to "edit", edit_path(@task) %>
-<%= link_to "return", tasks_new_path %>
+<%= link_to "Édit", edit_path(@task), class: "btn btn-primary" %>
+
+<%= link_to tasks_path do %>
+<p class= "btn btn-primary"> Return <i class="fas fa-undo-alt"></i> </p>
+<% end %>
+
+
+
